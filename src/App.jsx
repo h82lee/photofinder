@@ -10,20 +10,21 @@ const App = () => {
   const [images, setImages] = useState([]);
 
   const fetchPhotos = async (term) => {
-    const response = await unsplash.get("/search/photos", {
+    const response = await unsplash.get("/search/photos?per_page=30", {
       params: { query: term },
     });
 
     const results = response.data.results;
     setImages(results);
+    console.log(images);
   };
 
   return (
-    <Container maxWidth="lg" sx={{ my: 12 }}>
+    <>
       <Header />
       <SearchBar onSubmit={fetchPhotos} />
       <PhotoList images={images} />
-    </Container>
+    </>
   );
 };
 

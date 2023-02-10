@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <AppBar position="absolute">
       <Toolbar>
-        <ImageIcon sx={{ mr: 2 }} />
-        <Typography variant="h6" color="inherit" noWrap>
+        <ImageIcon color="primary.contrastText" sx={{ mr: 2 }} />
+        <Typography variant="h6" noWrap>
           Photo Finder
         </Typography>
       </Toolbar>

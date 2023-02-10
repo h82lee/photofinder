@@ -12,7 +12,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <Container>
+    <Container sx={{ mt: 12 }}>
       <form onSubmit={onFormSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={10}>
@@ -24,9 +24,12 @@ const SearchBar = (props) => {
             />
           </Grid>
           <Grid item xs={2}>
-            <Button variant="contained" sx={{ mt: 1 }} type="submit">
+            <Button variant="contained" sx={{ mt: 1, ml: 4 }} type="submit">
               Search
             </Button>
+          </Grid>
+          <Grid item xs={12}>
+            {" "}
           </Grid>
         </Grid>
       </form>

@@ -1,3 +1,5 @@
+import { ImageList } from "@mui/material";
+import { Stack } from "@mui/system";
 import Photo from "./Photo";
 
 const PhotoList = ({ images }) => {
@@ -5,7 +7,15 @@ const PhotoList = ({ images }) => {
     return <Photo key={image.id} image={image} />;
   });
 
-  return <div>{renderedPhotos}</div>;
+  return (
+    <div>
+      <Stack spacing={4}>
+        <ImageList variant="masonry" cols={3} gap={8}>
+          {renderedPhotos}
+        </ImageList>
+      </Stack>
+    </div>
+  );
 };
 
 export default PhotoList;
